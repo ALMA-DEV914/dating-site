@@ -49,5 +49,14 @@ nav .nav-button{
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: linear-gradient(to bottom, rgb(0, 166, 255), rgb(255, 0, 51), rgb(6, 107, 86));
+  background: linear-gradient(to bottom, rgb(241, 243, 245), rgb(195, 189, 190), rgb(6, 107, 86));
+}
+
+.auth-modal{
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
 }
