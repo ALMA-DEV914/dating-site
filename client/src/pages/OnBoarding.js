@@ -2,20 +2,20 @@ import { useState } from "react";
 import Nav from "../components/Nav";
 
 const OnBoarding = () => {
-   const [formData, setFormData] = useState({
-    user_id:'',
-    first_name: '',
-    dob_day: '',
-    dob_month: '',
-    dob_year: '',
-    show_gender: '',
-    gender_identity: 'man',
-    gender_interest: 'woman',
-    email: '',
-    url: '',
-    about: '',
-    matches: []
-   });
+  const [formData, setFormData] = useState({
+    user_id: "",
+    first_name: "",
+    dob_day: "",
+    dob_month: "",
+    dob_year: "",
+    show_gender: "",
+    gender_identity: "",
+    gender_interest: "",
+    email: "",
+    url: "",
+    about: "",
+    matches: [],
+  });
 
   const handleSubmit = () => {
     console.log("submitted");
@@ -23,17 +23,17 @@ const OnBoarding = () => {
 
   const hanldeChange = (e) => {
     console.log("e", e);
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
     const name = e.target.name;
 
     setFormData((previousState) => ({
-        ...previousState,
-        [name] : value
-    }))
-    
+      ...previousState,
+      [name]: value,
+    }));
   };
 
-  console.log(formData)
+  console.log(formData);
 
   return (
     <>
@@ -92,7 +92,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="man-gender-identity"
                 name="gender_identity"
-                checked={formData.gender_identity === 'man'}
+                checked={formData.gender_identity === "man"}
                 required={true}
                 value="man"
                 onChange={hanldeChange}
@@ -103,7 +103,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="woman-gender-identity"
                 name="gender_identity"
-                checked={formData.gender_identity === 'woman'}
+                checked={formData.gender_identity === "woman"}
                 required={true}
                 value="woman"
                 onChange={hanldeChange}
@@ -112,14 +112,14 @@ const OnBoarding = () => {
 
               <input
                 type="radio"
-                id="more-gender-interest"
-                name="gender_interest"
-                checked={formData.gender_identity === 'more'}
+                id="more-gender-identity"
+                name="gender_identity"
+                checked={formData.gender_identity === "more"}
                 required={true}
                 value="more"
                 onChange={hanldeChange}
               />
-              <label htmlFor="more-gender-interest">More</label>
+              <label htmlFor="more-gender-identity">More</label>
             </div>
 
             <label htmlFor="show-gender">Show gender on my profile</label>
@@ -138,7 +138,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="man-gender-interest"
                 name="gender_interest"
-                checked={formData.gender_interest === 'man'}
+                checked={formData.gender_interest === "man"}
                 required={true}
                 value="man"
                 onChange={hanldeChange}
@@ -149,7 +149,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="woman-gender-interest"
                 name="gender_interest"
-                checked={formData.gender_interest === 'woman'}
+                checked={formData.gender_interest === "woman"}
                 required={true}
                 value="woman"
                 onChange={hanldeChange}
@@ -157,14 +157,14 @@ const OnBoarding = () => {
               <label htmlFor="woman-gender-interest">Woman</label>
               <input
                 type="radio"
-                id="more-gender-interest"
+                id="everyone-gender-interest"
                 name="gender_interest"
-                checked={formData.gender_interest === 'everyone'}
+                checked={formData.gender_interest === "everyone"}
                 required={true}
                 value="everyone"
                 onChange={hanldeChange}
               />
-              <label htmlFor="more-gender-interest">Everyone</label>
+              <label htmlFor="everyone-gender-interest">Everyone</label>
             </div>
 
             <label htmlFor="about">About me</label>
@@ -177,7 +177,7 @@ const OnBoarding = () => {
               value={formData.about}
               onChange={hanldeChange}
             />
-             <input type="submit" placeholder="Submit"/>
+            <input type="submit" placeholder="Submit" />
           </section>
 
           <section>
@@ -190,10 +190,9 @@ const OnBoarding = () => {
               onChange={hanldeChange}
             />
             <div className="profile-photo">
-                <img src={formData.url} alt="profile-pic"/>
+              <img src={formData.url} alt="profile-pic" />
             </div>
           </section>
-         
         </form>
       </div>
     </>

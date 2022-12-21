@@ -116,7 +116,9 @@ h2{
    font-size: 17px;
 }
 /*---0nboarding page----*/
-
+.onboarding{
+  border: 2px solid rgb(237, 235, 235);
+}
 .onboarding form{
   display: flex;
   justify-content: center;
