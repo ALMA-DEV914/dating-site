@@ -151,6 +151,7 @@ const OnBoarding = () => {
               value={""}
               onChange={hanldeChange}
             />
+             <input type="submit" placeholder="Submit"/>
           </section>
 
           <section>
@@ -164,6 +165,7 @@ const OnBoarding = () => {
             />
             <div className="profile-photo"></div>
           </section>
+         
         </form>
       </div>
     </>
