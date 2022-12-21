@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import AuthModal from "../components/AuthModal";
 import { useState } from "react";
+import heart from "../images/received_230726544484428.gif"
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,15 +23,14 @@ const Home = () => {
         setIsSignup={setIsSignup}
       />
       <div className="home">
-        <h1>Swipe Right@</h1>
+        <h1 className="primary-title">Swipe Right@</h1>
+        <img src={heart} alt="" /><br></br>
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "Signout" : "Create Account"}
         </button>
-
         {showModal && (
           <AuthModal
             setShowModal={setShowModal}
-            setIsSignup={setIsSignup}
             isSignup={isSignup}
           />
         )}
