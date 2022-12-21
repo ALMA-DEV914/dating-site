@@ -2,12 +2,38 @@ import { useState } from "react";
 import Nav from "../components/Nav";
 
 const OnBoarding = () => {
+   const [formData, setFormData] = useState({
+    user_id:'',
+    first_name: '',
+    dob_day: '',
+    dob_month: '',
+    dob_year: '',
+    show_gender: '',
+    gender_identity: 'man',
+    gender_interest: 'woman',
+    email: '',
+    url: '',
+    about: '',
+    matches: []
+   });
+
   const handleSubmit = () => {
     console.log("submitted");
   };
-  const hanldeChange = () => {
-    console.log("change");
+
+  const hanldeChange = (e) => {
+    console.log("e", e);
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.trget.value;
+    const name = e.target.name;
+
+    setFormData((previousState) => ({
+        ...previousState,
+        [name] : value
+    }))
+    
   };
+
+  console.log(formData)
 
   return (
     <>
@@ -24,7 +50,7 @@ const OnBoarding = () => {
               name="first_name"
               placeholder="First Name"
               required={true}
-              value={""}
+              value={formData.first_name}
               onChange={hanldeChange}
             />
 
@@ -36,7 +62,7 @@ const OnBoarding = () => {
                 name="dob_day"
                 placeholder="Date"
                 required={true}
-                value={""}
+                value={formData.dob_day}
                 onChange={hanldeChange}
               />
               <input
@@ -45,7 +71,7 @@ const OnBoarding = () => {
                 name="dob_month"
                 placeholder="Month"
                 required={true}
-                value={""}
+                value={formData.dob_month}
                 onChange={hanldeChange}
               />
 
@@ -55,7 +81,7 @@ const OnBoarding = () => {
                 name="dob_year"
                 placeholder="Year"
                 required={true}
-                value={""}
+                value={formData.dob_year}
                 onChange={hanldeChange}
               />
             </div>
@@ -148,7 +174,7 @@ const OnBoarding = () => {
               name="about"
               required={true}
               placeholder="I like hiking and climbing...."
-              value={""}
+              value={formData.about}
               onChange={hanldeChange}
             />
              <input type="submit" placeholder="Submit"/>
@@ -163,7 +189,9 @@ const OnBoarding = () => {
               required={true}
               onChange={hanldeChange}
             />
-            <div className="profile-photo"></div>
+            <div className="profile-photo">
+                <img src={formData.url} alt="profile-pic"/>
+            </div>
           </section>
          
         </form>
