@@ -11,6 +11,7 @@ html, body {
 
 .primary-title{
   font-size: 90px;
+  color: rgb(17, 150, 94);
 }
 .primary-button{
   color: azure;
@@ -56,7 +57,19 @@ nav .nav-button:disabled{
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: linear-gradient(to bottom, rgb(164, 217, 213), rgb(236, 241, 241));
+  
+  
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: url('images/silhouette-pack-avatars_23-2147675548.webp') 0 0 repeat;
+  transform: rotate(30deg);
 }
 
 h2{

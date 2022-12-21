@@ -13,11 +13,11 @@ const Home = () => {
     setShowModal(true);
     setIsSignup(true);
   };
+  
   return (
     <div className="overlay">
       <Nav
         minimal={false}
-        authToken={authToken}
         setShowModal={setShowModal}
         showModal={showModal}
         setIsSignup={setIsSignup}
