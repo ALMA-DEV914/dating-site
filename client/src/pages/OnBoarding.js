@@ -23,7 +23,7 @@ const OnBoarding = () => {
 
   const hanldeChange = (e) => {
     console.log("e", e);
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.trget.value;
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     const name = e.target.name;
 
     setFormData((previousState) => ({
@@ -92,7 +92,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="man-gender-identity"
                 name="gender_identity"
-                checked={false}
+                checked={formData.gender_identity === 'man'}
                 required={true}
                 value="man"
                 onChange={hanldeChange}
@@ -103,7 +103,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="woman-gender-identity"
                 name="gender_identity"
-                checked={false}
+                checked={formData.gender_identity === 'woman'}
                 required={true}
                 value="woman"
                 onChange={hanldeChange}
@@ -114,7 +114,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="more-gender-interest"
                 name="gender_interest"
-                checked={false}
+                checked={formData.gender_identity === 'more'}
                 required={true}
                 value="more"
                 onChange={hanldeChange}
@@ -127,7 +127,7 @@ const OnBoarding = () => {
               type="checkbox"
               id="show-gender"
               name="show_gender"
-              checked={false}
+              checked={formData.show_gender}
               required={true}
               onChange={hanldeChange}
             />
@@ -138,7 +138,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="man-gender-interest"
                 name="gender_interest"
-                checked={false}
+                checked={formData.gender_interest === 'man'}
                 required={true}
                 value="man"
                 onChange={hanldeChange}
@@ -149,7 +149,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="woman-gender-interest"
                 name="gender_interest"
-                checked={false}
+                checked={formData.gender_interest === 'woman'}
                 required={true}
                 value="woman"
                 onChange={hanldeChange}
@@ -159,7 +159,7 @@ const OnBoarding = () => {
                 type="radio"
                 id="more-gender-interest"
                 name="gender_interest"
-                checked={false}
+                checked={formData.gender_interest === 'everyone'}
                 required={true}
                 value="everyone"
                 onChange={hanldeChange}
