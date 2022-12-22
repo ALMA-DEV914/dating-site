@@ -9,6 +9,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
   const matchedUserIds = matches.map(({ user_id }) => user_id);
   const userId = cookies.UserId;
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getMatches = async () => {
     try {
       const response = await axios.get("http://localhost:8000/users", {

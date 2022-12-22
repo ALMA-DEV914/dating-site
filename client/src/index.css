@@ -263,11 +263,12 @@ h2{
 }
 
 .img-container {
-  height: 30px;
-  width: 30px;
+  height: 80px;
+  width: 80px;
   border-radius: 15px;
   overflow: hidden;
   margin: 10px;
+  
 }
 
 .img-container img {
@@ -280,6 +281,7 @@ h2{
   padding: 20px;
   height: 60vh;
   overflow-y: auto;
+  
 }
 
 /*-------- Chat Input --------*/
@@ -287,6 +289,12 @@ h2{
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.identity{
+  font-size: 12px;
+  margin-left: 10px;
+  color: rgb(207, 203, 203);
 }
 
 
