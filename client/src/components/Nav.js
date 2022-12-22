@@ -16,6 +16,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
           alt="logo"
         />
       </div>
+      <div>
       {!authToken && !minimal && (
         <button
           className="nav-button"
@@ -25,6 +26,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
           Log in
         </button>
       )}
+      </div>
     </nav>
   );
 };
