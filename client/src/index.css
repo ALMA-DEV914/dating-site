@@ -181,6 +181,7 @@ h2{
 .profile-photo img{
   width: 100%;
 }
+
 /*-------- Dashboard  --------*/
 .dashboard {
   display: flex;
@@ -304,6 +305,18 @@ h2{
 .swipe-email{
   color: #fff;
   margin-top: -10px;
+}
+
+@media screen and (max-width:575px){
+  .dashboard{
+   display: block;
+  }
+  .dashboard .swipe-container {
+    width: 100%;
+  }
+  .chat-container{
+    width: 100%;
+  }
 }
 
 

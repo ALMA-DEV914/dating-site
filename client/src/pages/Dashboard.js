@@ -82,7 +82,7 @@ const Dashboard = () => {
                 <ChatContainer user={user}/>
                 <div className="swipe-container">
                     <div className="card-container">
-
+                       <h2> Swipe to the right if you found a match!</h2> 
                         {filteredGenderedUsers?.map((genderedUser) =>
                             <TinderCard
                                 className="swipe"

@@ -1,0 +1,26 @@
+{
+  "name": "dating-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALMA-DEV914/dating-site.git"
+  },
+  "author": "ALMA_DEV914",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALMA-DEV914/dating-site/issues"
+  },
+  "homepage": "https://github.com/ALMA-DEV914/dating-site#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
