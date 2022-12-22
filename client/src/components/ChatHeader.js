@@ -15,7 +15,7 @@ const ChatHeader = ({ user }) => {
                 <div className="img-container">
                     <img src={user.url} alt={"photo of " + user.first_name}/>
                 </div>
-                <h3>{user.first_name}</h3>
+                <h3>{user.first_name} -</h3>
                 
                 <p className='identity'>{user.gender_identity}</p>
             </div>

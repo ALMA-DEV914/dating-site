@@ -203,6 +203,7 @@ h2{
 .dashboard .card-container {
   width: 400px;
   height: 650px;
+  
 }
 
 .card {
@@ -295,6 +296,14 @@ h2{
   font-size: 12px;
   margin-left: 10px;
   color: rgb(207, 203, 203);
+}
+.swipe-name{
+  color: #fff;
+  font-size: 25px;
+}
+.swipe-email{
+  color: #fff;
+  margin-top: -10px;
 }
 
 
