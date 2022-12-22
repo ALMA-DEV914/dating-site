@@ -22,11 +22,11 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
 
   useEffect(() => {
     getMatches();
-  }, [matches]);
+  }, [getMatches, matches]);
 
   const filteredMatchedProfiles = matchedProfiles?.filter(
     (matchedProfile) =>
-      matchedProfile.matches.filter((profile) => profile.user_id == userId)
+      matchedProfile.matches.filter((profile) => profile.user_id === userId)
         .length > 0
   );
 
